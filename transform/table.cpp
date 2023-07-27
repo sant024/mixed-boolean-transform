@@ -2,28 +2,27 @@
 #include <iostream>
 
 
-// 2 VARIABLE SUPPORTED ONLY
 Table::Table(int t= 4) : rng(std::time(0)), dist(0, ExpressionTruthTableVec.size() - 1), column_matrix(4, 4) {
     this->t = t;
     
      // k =t
-    for (int i = 0; i < t; ++i) {
-        std::size_t idx = dist(rng);
-        std::cout << "random index: " << idx << std::endl;
-        initial_truth_table.push_back(ExpressionTruthTableVec[idx].truth_table);
-    }
+    //for (int i = 0; i < t; ++i) {
+    //    std::size_t idx = dist(rng);
+    //    std::cout << "random index: " << idx << std::endl;
+    //    initial_truth_table.push_back(ExpressionTruthTableVec[idx].truth_table);
+    //}
 
     // let's say these are random values
-    //    std::vector<int> l1 = { 1, 0, 1, 1 };
-    //    std::vector<int> l2 = { 0, 1, 1, 0 };
-    //    std::vector<int> l3 = { 0, 1, 0, 0 };
-    //    std::vector<int> l4 = { 1, 0, 0, 1 }; // working 1:1
-    //initial_truth_table.push_back(l1);
-    //initial_truth_table.push_back(l2);
-    //initial_truth_table.push_back(l3);
-    //initial_truth_table.push_back(l4);
+        std::vector<int> l1 = { 1, 0, 1, 1 };
+        std::vector<int> l2 = { 0, 1, 1, 0 };
+        std::vector<int> l3 = { 0, 1, 0, 0 };
+        std::vector<int> l4 = { 1, 0, 0, 1 }; // working 1:1
+    initial_truth_table.push_back(l1);
+    initial_truth_table.push_back(l2);
+    initial_truth_table.push_back(l3);
+    initial_truth_table.push_back(l4);
 
-
+    // fix to add variables
     for (const auto& vec : initial_truth_table) {
         std::cout << "Push row as VectorXd:" << vec[0] << vec[1] << vec[2] << vec[3] << std::endl;;
         Eigen::VectorXd _vec(4); // 2 variable truth table (4) only
