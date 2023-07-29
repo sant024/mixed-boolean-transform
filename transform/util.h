@@ -12,14 +12,6 @@ inline void print_vec(std::vector<int>& tt) {
 
 }
 
-inline std::string generate_random_string(int k) {
-    std::string chars = "abcdefghijklmnop";
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::shuffle(chars.begin(), chars.end(), gen);
-    return chars.substr(0, k);
-}
-
 inline std::string get_expr_from_vec(const std::vector<int>& inputVector) {
 
     std::cout << "[=]Truth table to converted to expression: " << std::endl;

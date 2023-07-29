@@ -6,6 +6,7 @@ public:
 	Evaluate(int t);
 	Eigen::VectorXd solution;
 	std::string get_expression(Table& table);
+	void constant(std::string& z);
 private:
 
 };
