@@ -1,5 +1,5 @@
 # mixed-boolean-transform
-Use mixed boolean arithmetic expressions to hide sensitive information such as
+A proof-of-concept program to show how mixed boolean arithmetic expressions can hide sensitive information such as
 constants / expressions in source code.
 
 ## Background
