@@ -134,8 +134,8 @@ std::string solv(const std::string& input) {
 }
 
 void Evaluate::constant(std::string& z) {
-    int k = 129;
-    int k_shift = 129;
+    int k = 1020;  // put the constant here, for example : 1020
+    int k_shift = 1020;
     int k_bit_len = 0;
 
     while (k_shift > 0) {
@@ -180,7 +180,7 @@ void Evaluate::constant(std::string& z) {
         q.replace(pos, to_replace.length(), "(" + z + ")+(" + p_val + ")");
     // q val
 
-    std::string out = "(" + q + ")" + "%2**" + std::to_string(n);
+    std::string out = "(" + q + ")" + "%1<<" + std::to_string(n);
 
     std::cout << " go: " << out << std::endl;
 }

@@ -8,12 +8,10 @@
 #include "evaluate.h"
 #include "util.h"
 
-
-
 int main() {
     std::string z;
     // to obfuscate constants and expressions
-    int var_count = 4; // 4 only , fix line 27 in table << << matrix
+    int var_count = 4; 
     bool satsfied = false;
     while (!satsfied) {
         Table table = Table(var_count);
@@ -41,4 +39,5 @@ int main() {
     std::cout << "complete\n";
     return 0;
 }
+
 
