@@ -178,7 +178,7 @@ void Evaluate::constant(std::string& z) {
         q.replace(pos, to_replace.length(), "(" + z + ")+(" + p_val + ")");
     // q val
 
-    std::string out = "(" + q + ")" + "%1<<" + std::to_string(n);
+    std::string out = "(" + q + ")" + "%2**" + std::to_string(n);
 
     std::cout << " go: " << out << std::endl;
 }
