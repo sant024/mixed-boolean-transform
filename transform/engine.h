@@ -1,7 +1,7 @@
 #pragma once
 #include <z3++.h>
 #include <Eigen/Dense>
-// Backend supported : Z3 , more soon
+
 class Engine {
 public:
 	Engine(int t);
