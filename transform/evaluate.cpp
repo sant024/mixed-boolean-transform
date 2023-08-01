@@ -153,8 +153,6 @@ void Evaluate::constant(std::string& z) {
     std::uniform_int_distribution<int> distribution(minVal, maxVal);
     int n = distribution(generator);
     std::cout << "N value argument: " << n << std::endl;
-    n = 79;
-    std::cout << "Should be 79 " << n << std::endl;
 
     auto coeffs = get_invertible_affine(n);
 
