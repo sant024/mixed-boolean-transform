@@ -45,7 +45,7 @@ int main() {
 	return 0; // Will print 1080
 }
 ```
-In this C++ file, we can evaluate that the value will be printed is 1080.
+In this C++ file, we can easily trace that the value will be printed is 1080.
 
 ```cpp
 #include <iostream>
@@ -69,6 +69,7 @@ int main() {
     std::cout << "Value is: " << fun_c(40,20) << std::endl;  
     return 0;
 ```
+After, it is now difficult to see what will be printed after passing `40, 20`
 
 ## Limitations
 It is possible to apply this source-to-source constant transformation on C++ files; however, parsing and handling large integer types would need to be taken into consideration.
